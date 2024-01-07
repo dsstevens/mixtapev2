@@ -1,0 +1,31 @@
+section {
+  background-color: #ffb1c7;
+}
+
+.album-container {
+  display:flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 20px;
+  background-color: lightblue;
+  border-radius: 6px;
+}
+
+.add-button {
+  width: 150px;
+  height: 30px;
+  margin: auto;
+  border-radius: 6px;
+}
+
+.add-button:hover {
+  cursor: pointer;
+}

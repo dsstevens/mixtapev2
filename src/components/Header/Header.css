@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #dbdc46;
+}
+
+.page-title {
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
+  align-self: center;
+  flex-grow: 2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,21 @@
+.home-button {
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
+  justify-self: right;
+  text-decoration: none;
+  color: black;
+  margin: 1%;
+  padding: 20px 40px;
+  border: 1px solid purple;
+  border-radius: 25px 25px 25px 25px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: #ab63fb;
+}
+
+.page-title-shifted {
+  margin-left: 10.5rem;
+}

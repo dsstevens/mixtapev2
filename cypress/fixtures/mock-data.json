@@ -1,0 +1,54 @@
+{
+  "pagination": {
+    "page": 1,
+    "pages": 5,
+    "per_page": 50,
+    "items": 222,
+    "urls": {
+      "last": "https://api.discogs.com/users/mixtapestretch/collection/folders/0/releases?page=5&per_page=50",
+      "next": "https://api.discogs.com/users/mixtapestretch/collection/folders/0/releases?page=2&per_page=50"
+    }
+  },
+  "releases": [
+    {
+      "id": 123456,
+      "instance_id": 987654321,
+      "date_added": "2023-12-19T19:56:13-08:00",
+      "rating": 4,
+      "basic_information": {
+        "id": 123456,
+        "master_id": 321654,
+        "master_url": "https://api.discogs.com/masters/321654",
+        "resource_url": "https://api.discogs.com/releases/123456",
+        "thumb": "https://example.com/image/thumb.jpg",
+        "cover_image": "https://example.com/image/cover.jpg",
+        "title": "Sample Album Title",
+        "year": 2023,
+        "formats": [
+          {
+            "name": "Vinyl",
+            "qty": "1",
+            "descriptions": ["LP", "Album"]
+          }
+        ],
+        "artists": [
+          {
+            "name": "Sample Artist",
+            "id": 654321,
+            "resource_url": "https://api.discogs.com/artists/654321"
+          }
+        ],
+        "labels": [
+          {
+            "name": "Sample Label",
+            "catno": "SL1234",
+            "id": 432156,
+            "resource_url": "https://api.discogs.com/labels/432156"
+          }
+        ],
+        "genres": ["Rock"],
+        "styles": ["Alternative Rock"]
+      }
+    }
+  ]
+}

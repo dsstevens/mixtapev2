@@ -1,0 +1,44 @@
+.years-dropdown-button {
+  margin-left: 90%;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #356fa0;
+  color: #dbdc46;
+}
+
+.years-dropdown-button:hover {
+  background-color: #ab63fb;
+}
+
+.menu {
+  list-style-type: none;
+  margin-top: 0;
+  margin-left: 90%;
+  padding: 0;
+  border: 1px solid gray;
+  width: 150px;
+}
+
+.menu > li {
+  margin: 0;
+  background-color: #866dc1;
+}
+
+.menu > li:hover {
+  background-color: #ff009c;
+  color: white;
+}
+
+.menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
