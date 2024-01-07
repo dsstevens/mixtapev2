@@ -34,7 +34,7 @@ const Home = () => {
     <div className="Home">
       <Dropdown
         open={open}
-        trigger={<button className='years-dropdown-button' onClick={handleOpen}>Choose your favorite year from the 80's!</button>}
+        trigger={<button className='years-dropdown-button main-page-font' onClick={handleOpen}>Choose your favorite year from the 80's!</button>}
         menu={[1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989].map((year) => (
           <button key={year} onClick={() => handleYear(year)}>{year}</button>
         ))}

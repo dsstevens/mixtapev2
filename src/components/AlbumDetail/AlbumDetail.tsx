@@ -66,12 +66,13 @@ console.log("SINGLE ALBUM", singleAlbum)
 
 const tracks = (singleAlbum as OneAlbum).tracklist?.map((album, index) => (
   <div key={index} className='track'>
-    <div className="track-info">
+    <div className="track-info album-tracklist-font"> {/* Apply the class here */}
       <p>{index + 1}. {album.title}</p>
       <button className='add-button'>Add</button>
     </div>
   </div>
 ));
+
 
 return (
   <section>
