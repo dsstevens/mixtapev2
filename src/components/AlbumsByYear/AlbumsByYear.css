@@ -9,7 +9,7 @@ html, body {
     padding: 20px;
     font-family: 'Averia Serif Libre', serif;
     font-family: 'Silkscreen', sans-serif;
-    height: 100%;
+    height: 100% 100%
 }
 
 .album-grid {
@@ -17,6 +17,16 @@ html, body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
+    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Silkscreen', sans-serif;
+    
+}
+
+.album {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
 }
  
 .album-cover {
