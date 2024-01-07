@@ -1,16 +1,16 @@
-import './App.css';
+import "./App.css";
 
-import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
-import Header from '../Header/Header';
-import Home from '../Home/Home';
-import AlbumsByYear from '../AlbumsByYear/AlbumsByYear';
-import AlbumDetail from '../AlbumDetail/AlbumDetail';
-import HomeButton from '../HomeButton/HomeButton';
+import Header from "../Header/Header";
+import Home from "../Home/Home";
+import AlbumsByYear from "../AlbumsByYear/AlbumsByYear";
+import AlbumDetail from "../AlbumDetail/AlbumDetail";
+import HomeButton from "../HomeButton/HomeButton";
 import { getCollection } from "../../apiCalls";
 
-type AppProps = JSX.IntrinsicElements['main'];
+type AppProps = JSX.IntrinsicElements["main"];
 
 interface Artist {
   name: string;
@@ -29,36 +29,49 @@ interface Release {
   basic_information: BasicInformation;
 }
 
+// interface Track {
+// duration: string;
+// position: string;
+// title: string;
+// type_: string;
+// }
+
 const App: React.FC<AppProps> = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === "/";
 
   const [albums, setAlbums] = useState<BasicInformation[]>([]);
+  // const [tracklist, setTracklist] = useState<Track[]>([])
+
+  // const addSong = (track: Track) => {
+  //   const song = singleAlbum
+  //   setTracklist([...tracklist, track])
+  // }
 
   const fetchAlbums = async () => {
-      try {
-        let allAlbums: BasicInformation[] = [];
-        let page = 1;
-        const perPage = 50;
-        let totalPages = 1;
+    try {
+      let allAlbums: BasicInformation[] = [];
+      let page = 1;
+      const perPage = 50;
+      let totalPages = 1;
 
-        while (page <= totalPages) {
-          const response = await getCollection(page, perPage);
-          const newAlbums: BasicInformation[] = response.releases.map(
-            (release: Release) => release.basic_information
-          );
-          allAlbums = allAlbums.concat(newAlbums);
+      while (page <= totalPages) {
+        const response = await getCollection(page, perPage);
+        const newAlbums: BasicInformation[] = response.releases.map(
+          (release: Release) => release.basic_information
+        );
+        allAlbums = allAlbums.concat(newAlbums);
 
-          if (page === 1) {
-            totalPages = response.pagination.pages;
-          }
-          page++;
+        if (page === 1) {
+          totalPages = response.pagination.pages;
         }
-
-        setAlbums(allAlbums);
-      } catch (error) {
-        console.error("Error fetching collection:", error);
+        page++;
       }
+
+      setAlbums(allAlbums);
+    } catch (error) {
+      console.error("Error fetching collection:", error);
+    }
   };
 
   useEffect(() => {
