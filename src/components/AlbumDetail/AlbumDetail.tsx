@@ -56,25 +56,34 @@ const AlbumDetailPage = (props: AlbumDetailPageProps) => {
   const params = useParams();
   const id = parseInt(params.album_id as string);
 
-  const handleClick = (trackIndex: number) => {
+  const handleClick = (trackIndex: number, trackName: string) => {
     setClickedTracks((prevState) => ({
       ...prevState,
       [trackIndex]: true,
     }));
-    getTracks();
+    addSong(trackName)
     console.log("SAVED TRACKS", savedTracks)
   };
 
-  const getTracks = () => {
-    let arr: Track[] = [];
-    let keys = Object.keys(clickedTracks);
+  // const getTracks = () => {
+  //   let arr: Track[] = [];
+  //   let keys = Object.keys(clickedTracks);
 
-    (singleAlbum as OneAlbum).tracklist.forEach((single, index) => {
-      if (keys.includes(index.toString())) {
-        arr.push(single);
-      }
-    });
-    setSavedTracks(arr);
+  //   (singleAlbum as OneAlbum).tracklist.forEach((single, index) => {
+  //     if (keys.includes(index.toString())) {
+  //       arr.push(single);
+  //     }
+  //   });
+  //   setSavedTracks(arr);
+  // };
+
+  const addSong = (title: string) => {
+    let foundTrack = (singleAlbum as OneAlbum).tracklist.find(
+      (single) => single.title === title
+    );
+    if (foundTrack) {
+      setSavedTracks([...savedTracks, foundTrack]);
+    }
   };
 
   const handleHomeClick = () => {
@@ -96,13 +105,13 @@ const AlbumDetailPage = (props: AlbumDetailPageProps) => {
     }
   }, [id]);
 
-  const tracks = (singleAlbum as OneAlbum).tracklist?.map((album, index) => (
-    <div className="tracks" key={album.title}>
-      <p>Song: {album.title}</p>
-      <p>Duration: {album.duration}</p>
+  const tracks = (singleAlbum as OneAlbum).tracklist?.map((track, index) => (
+    <div className="tracks" key={track.title}>
+      <p>Song: {track.title}</p>
+      <p>Duration: {track.duration}</p>
       {clickedTracks[index] && <span className="add-button"> Added ✅</span>}
       {!clickedTracks[index] && (
-        <button onClick={() => handleClick(index)} className="add-button">
+        <button onClick={() => handleClick(index, track.title)} className="add-button">
           Add
         </button>
       )}
