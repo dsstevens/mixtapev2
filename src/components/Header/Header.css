@@ -1,15 +1,67 @@
 header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  text-align: center;
+  justify-content: space-around;
   background-color: #dbdc46;
 }
 
-.page-title {
+.page-title, .page-title-albums-page {
   font-family: 'Averia Serif Libre', serif;
   font-family: 'Silkscreen', sans-serif;
-  align-self: center;
-  flex-grow: 2;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+/* MEDIUM BREAKPOINT */
+@media screen and (max-width: 1449px) and (min-width: 700px) {
+  header {
+    display: flex;
+    justify-content: center;
+    background-color: #c5d32d;
+
+  }
+
+  .page-title {
+    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Silkscreen', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  .page-title-albums-page {
+    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Silkscreen', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    padding-right: 10%;
+  }
+}
+
+/* SMALL BREAKPOINT */
+@media screen and (max-width: 699px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #c5d32d;
+  }
+
+  .page-title {
+    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Silkscreen', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .page-title-albums-page {
+    font-family: 'Averia Serif Libre', serif;
+    font-family: 'Silkscreen', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
 }

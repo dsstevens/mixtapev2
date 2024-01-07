@@ -9,7 +9,7 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ children, isHomePage }) => {
   return (
     <header>
-      <h1 className={`page-title ${isHomePage ? 'header' : 'page-title-shifted'}`}>MixTape</h1>
+       <h1 className={`page-title${isHomePage ? '' : '-albums-page'}`}>MixTape</h1>
       {children}
     </header>
   );
