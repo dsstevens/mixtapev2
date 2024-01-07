@@ -1,7 +1,9 @@
 .Home {
   background-color: #da68b3;
   height: 100vh;
+  width: 100%;
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
   font-family: 'Averia Serif Libre', serif;
   font-family: 'Silkscreen', sans-serif;
@@ -13,14 +15,34 @@
   margin-left: 5vh;
   font-family: 'Averia Serif Libre', serif;
   font-family: 'Silkscreen', sans-serif;
+=======
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dropdown {
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-top: 20vh;
+>>>>>>> b44a67bbb0fdd945d65263b54409dadeee18dfa4
 }
 
 .tracklist-container {
-  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  height: 60%;
+  border: 3px solid #356fa0;
+  background: url('../../../public/piece-paper-with-paper-balls-around.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.image-credits {
+  font-size: 0.5rem;
+  display: flex;
   align-self: flex-end;
-  margin-right: 10vh;
-  margin-top: 15vh;
-  padding-left: 10vh;
-  padding-right: 10vh;
-  padding-bottom: 2vh;
 }
