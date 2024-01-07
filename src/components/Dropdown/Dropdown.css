@@ -3,7 +3,7 @@
   height: 50px;
   font-size: 16px;
   background-color: #356fa0;
-  color: #dbdc46;
+  color: white;
 }
 
 .years-dropdown-button:hover {
@@ -20,11 +20,11 @@
 
 .menu>li {
   margin: 0;
-  background-color: #866dc1;
+  background-color: #dbdc46;
 }
 
 .menu>li:hover {
-  background-color: #ff009c;
+  background-color: #356fa0;
   color: white;
 }
 
