@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Main Page', () => {
     beforeEach(() => {
       cy.intercept('GET', 'https://api.discogs.com/users/mixtapestretch/collection/folders/0/releases*', {

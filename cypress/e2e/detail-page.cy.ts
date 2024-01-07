@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Album Detail Page', () => {
     beforeEach(() => {
       cy.intercept('GET', 'https://api.discogs.com/releases/*', {
