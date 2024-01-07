@@ -1,10 +1,9 @@
 import './Tracklist.css';
-
 import React from "react";
 
 const Tracklist = () => {
   return (
-    <div>
+    <div className='internal-tracklist-container'>
       <h2 className='tracklist-title'>My Playlist</h2>
       <ul className='tracklist'>
         {/* placeholder tracks */}
