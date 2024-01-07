@@ -1,14 +1,27 @@
 .years-dropdown-button {
   margin-left: 90%;
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-  background-color: #356fa0;
+  width: 350px;
+  height: 150px;
+  font-size: 24px;
   color: #dbdc46;
+  border: 2px solid #dbdc46; /* Chunky border */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #356fa0, #ab63fb);
+  box-shadow: 0 4px 8px rgba(1, 0, 0, 0.3);
+  text-shadow: 0 0 5px #fff;
+  outline: none; /* Remove focus outline */
+
+  /* Retro "chunky" effect */
+  /* transform: skew(-10deg); */
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
 }
 
 .years-dropdown-button:hover {
   background-color: #ab63fb;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .menu {
@@ -17,7 +30,7 @@
   margin-left: 90%;
   padding: 0;
   border: 1px solid gray;
-  width: 150px;
+  width: 350px;
 }
 
 .menu > li {

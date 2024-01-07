@@ -1,0 +1,28 @@
+{
+    "id": 587059,
+    "status": "Accepted",
+    "year": 1982,
+    "resource_url": "https://api.discogs.com/releases/587059",
+    "artists": [
+      {
+        "name": "Men At Work"
+      }
+    ],
+    "artists_sort": "Men At Work",
+    "country": "US",
+    "genres": ["Rock"],
+    "styles": ["Pop Rock"],
+    "title": "Business As Usual",
+    "tracklist": [
+      {"position": "A1", "type_": "track", "title": "Who Can It Be Now?"},
+      {"position": "A2", "type_": "track", "title": "I Can See It In Your Eyes"},
+      {"position": "A3", "type_": "track", "title": "Down Under"},
+      {"position": "A4", "type_": "track", "title": "Underground"},
+      {"position": "A5", "type_": "track", "title": "Helpless Automaton"},
+      {"position": "B1", "type_": "track", "title": "People Just Love To Play With Words"},
+      {"position": "B2", "type_": "track", "title": "Be Good Johnny"},
+      {"position": "B3", "type_": "track", "title": "Touching The Untouchables"},
+      {"position": "B4", "type_": "track", "title": "Catch A Star"},
+      {"position": "B5", "type_": "track", "title": "Down By The Sea"}
+    ]
+  }

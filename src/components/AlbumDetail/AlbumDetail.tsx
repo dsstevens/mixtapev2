@@ -64,23 +64,25 @@ const AlbumDetailPage = (props: AlbumDetailPageProps) => {
 
 console.log("SINGLE ALBUM", singleAlbum)
 
-  const tracks = (singleAlbum as OneAlbum).tracklist?.map((album) => (
-    <div className='tracks' key={album.title}>
-      <p>Song: {album.title}</p>
-      <p>Duration: {album.duration}</p>
+const tracks = (singleAlbum as OneAlbum).tracklist?.map((album, index) => (
+  <div key={index} className='track'>
+    <div className="track-info">
+      <p>{index + 1}. {album.title}</p>
       <button className='add-button'>Add</button>
     </div>
-  ));
+  </div>
+));
 
-  return (
-    <section>
-      <h2 className="album-title">Album Title: {(singleAlbum as OneAlbum).title}</h2>
-      <h3 className="artist-name">Artist: {(singleAlbum as OneAlbum).artists?.[0]?.name}</h3>
-      <div className='album-container'>
-        <div className='all-tracks'>{tracks}</div>
-      </div>
-    </section>
-  );
+return (
+  <section>
+    <h2 className="album-title">{(singleAlbum as OneAlbum).title}</h2>
+    <h3 className="artist-name">{(singleAlbum as OneAlbum).artists?.[0]?.name}</h3>
+    <div className='album-container'>
+      <div className='all-tracks'>{tracks}</div>
+    </div>
+  </section>
+);
 };
+
 
 export default AlbumDetailPage;
