@@ -9,6 +9,7 @@ html, body {
     padding: 20px;
     font-family: 'Averia Serif Libre', serif;
     font-family: 'Silkscreen', sans-serif;
+    height: 100%;
 }
 
 .album-grid {
