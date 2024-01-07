@@ -23,10 +23,13 @@
 .menu>li {
   margin: 0;
   background-color: #dbdc46;
+  font-size: 20px;
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
 }
 
 .menu>li:hover {
-  background-color: #356fa0;
+  background-color: #ab63fb;
   color: white;
 }
 

@@ -23,7 +23,7 @@ section {
 .track-info {
   display: flex;
   align-items: center;
-
+  color: darkblue
 }
 
 .track-info p {
@@ -70,5 +70,10 @@ section {
 .album-title, .artist-name {
   font-family: 'Averia Serif Libre', serif;
   font-family: 'Silkscreen', sans-serif;
+  color: darkblue
 }
 
+.album-title, .artist-name {
+  text-align: center;
+  /* Other styling as needed */
+}

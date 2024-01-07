@@ -17,15 +17,6 @@ html, body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    font-family: 'Averia Serif Libre', serif;
-    font-family: 'Silkscreen', sans-serif;
-}
-
-.album {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
 }
  
 .album-cover {
@@ -34,42 +25,20 @@ html, body {
     border-radius: 10px;
 }
   
-.album-title {
+.album-title, .year-title, .album-link {
+    color: darkblue;
+    text-align: center;
     margin-top: 10px;
-}
-
-.home-button {
     text-decoration: none;
-    color: black;
-    padding: 20px 40px;
-    border: 1px solid purple;
-    border-radius: 25px 25px 25px 25px;
-    background-color: transparent;
-    cursor: pointer;
 }
-
-.home-button:hover {
-    background-color: #ab63fb;
-}
-
-.year-title {
-  color: black;
-  text-align: center;
-}
-
-.album-link {
-    text-decoration: none;
-  }
 
 .album {
-    background-color: #eeee9c;
+    background-color: #77cdea;
     padding: 10px;
     margin: 10px;
     cursor: pointer;
-    border: 2px solid #fff;
+    border: 2px solid #598957;
     border-radius: 5px;
-    color: black;
-
     font-weight: bold;
     transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
 }
@@ -81,5 +50,20 @@ html, body {
 
 .album:active {
     transform: translateY(2px);
+    background-color: #ab63fb;
+}
+
+.home-button {
+    text-decoration: none;
+    color: black;
+    padding: 20px 40px;
+    border: 1px solid purple;
+    border-radius: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
     background-color: #ab63fb;
 }
