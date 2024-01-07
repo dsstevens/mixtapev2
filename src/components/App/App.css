@@ -3,3 +3,12 @@
   flex-direction: column;
   height: 100vh;
 }
+
+.main-page-font {
+  font-family: 'Indie Flower', cursive;
+}
+
+.album-tracklist-font {
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
+}

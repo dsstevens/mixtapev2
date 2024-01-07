@@ -1,9 +1,11 @@
 .years-dropdown-button {
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
+  width: 250px;
+  height: 150px;
+  font-size: 24px;
   background-color: #356fa0;
-  color: white;
+  color: #dbdc46;
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
 }
 
 .years-dropdown-button:hover {
@@ -15,16 +17,19 @@
   margin-top: 0;
   padding: 0;
   border: 1px solid gray;
-  width: 150px;
+  width: 250px;
 }
 
 .menu>li {
   margin: 0;
   background-color: #dbdc46;
+  font-size: 20px;
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
 }
 
 .menu>li:hover {
-  background-color: #356fa0;
+  background-color: #ab63fb;
   color: white;
 }
 
