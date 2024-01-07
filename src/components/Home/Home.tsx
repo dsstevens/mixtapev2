@@ -1,11 +1,9 @@
 import './Home.css';
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import Tracklist from '../Tracklist/Tracklist';
 import Dropdown from '../Dropdown/Dropdown';
-import {getCollection} from '../../apiCalls';
+import { getCollection } from '../../apiCalls';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -44,6 +42,7 @@ const Home = () => {
 
       <div className='tracklist-container'>
         <Tracklist />
+        <p className='image-credits'>Image by janoon028 on Freepik</p>
       </div>
     </div>
   );
