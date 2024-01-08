@@ -29,8 +29,9 @@ interface Release {
   basic_information: BasicInformation;
 }
 
-interface TrackType {
+export interface TrackType {
   title: string;
+  
 }
 
 const App: React.FC<AppProps> = () => {
