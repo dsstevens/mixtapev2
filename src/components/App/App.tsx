@@ -45,11 +45,11 @@ const App: React.FC<AppProps> = () => {
     if (!playlist.some(t => t.position === track.position)) {
       setPlaylist(prevPlaylist => {
         const updatedPlaylist = [...prevPlaylist, track];
-        console.log("Updated Playlist:", updatedPlaylist); // Log the updated playlist
+        console.log("Updated Playlist:", updatedPlaylist);
         return updatedPlaylist;
       });
     } else {
-      console.log(`This track is already in your playlist.`);
+      alert(`This track is already in your playlist.`);
     }
   };
 
