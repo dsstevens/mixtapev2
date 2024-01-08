@@ -5,11 +5,10 @@
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  width: 80%; 
+  width: 80%;
   max-height: 55%;
-  max-width: 50%;
+  max-width: 90%; /* Adjust this value to control the width */
   margin-left: 25%;
-  margin-top: 10%;
   margin-right: 15%;
   margin-bottom: 10%;
   overflow: visible;
