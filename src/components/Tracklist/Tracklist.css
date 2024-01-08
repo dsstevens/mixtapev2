@@ -1,16 +1,18 @@
 .internal-tracklist-container {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  width: 100%;
+  width: 80%; 
   max-height: 55%;
+  max-width: 50%;
   margin-left: 25%;
   margin-top: 10%;
   margin-right: 15%;
   margin-bottom: 10%;
-  overflow: auto;
+  overflow: visible;
 }
 
 .tracklist-title {
@@ -24,5 +26,25 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: visible;
+}
+
+.tracklist .track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  margin: 2px 0;
+}
+
+.tracklist .track p {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px; 
+}
+
+.tracklist .track .add-button {
+  white-space: nowrap;
 }

@@ -4,27 +4,12 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center; 
+  align-items: center;
 }
 
 .dropdown {
-  align-self: flex-start;
-  justify-self: flex-start;
-  margin-top: 20vh;
-}
-
-.tracklist-container {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  align-items: flex-start;
-  justify-content: center;
-  width: 50%;
-  height: 60%;
-  border: 3px solid #356fa0;
-  background: url('../../../public/piece-paper-with-paper-balls-around.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  margin: 0 250px;
 }
 
 .image-credits {

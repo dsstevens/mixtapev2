@@ -1,21 +1,37 @@
 {
-    "title": "Business As Usual",
-    "year": 1982,
-    "id": "587059",
-    "master_id": "82009",
-    "artists": [{"name": "Men At Work"}]
-},
-{
-    "title": "Thriller",
-    "year": 1982,
-    "id": "123456",
-    "master_id": "654321",
-    "artists": [{"name": "Michael Jackson"}]
-},
-{
-    "title": "Rio",
-    "year": 1982,
-    "id": "789101",
-    "master_id": "101987",
-    "artists": [{"name": "Duran Duran"}]
+  "albums": [
+    {
+      "title": "Business As Usual",
+      "year": 1982,
+      "id": "587059",
+      "master_id": "82009",
+      "artists": [
+        {
+          "name": "Men At Work"
+        }
+      ]
+    },
+    {
+      "title": "Thriller",
+      "year": 1982,
+      "id": "123456",
+      "master_id": "654321",
+      "artists": [
+        {
+          "name": "Michael Jackson"
+        }
+      ]
+    },
+    {
+      "title": "Rio",
+      "year": 1982,
+      "id": "789101",
+      "master_id": "101987",
+      "artists": [
+        {
+          "name": "Duran Duran"
+        }
+      ]
+    }
+  ]
 }
