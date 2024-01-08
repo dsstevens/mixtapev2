@@ -42,7 +42,13 @@ const App: React.FC<AppProps> = () => {
   const [albums, setAlbums] = useState<BasicInformation[]>([]);
 
   const addToPlaylist = (track: TrackType) => {
-    if (!playlist.some(t => t.position === track.position)) {
+    const isDuplicate = playlist.some(playlistTrack =>
+      playlistTrack.title === track.title &&
+      playlistTrack.artist === track.artist &&
+      playlistTrack.position === track.position
+    );
+  
+    if (!isDuplicate) {
       setPlaylist(prevPlaylist => {
         const updatedPlaylist = [...prevPlaylist, track];
         console.log("Updated Playlist:", updatedPlaylist);
@@ -52,6 +58,8 @@ const App: React.FC<AppProps> = () => {
       alert(`This track is already in your playlist.`);
     }
   };
+  
+  
 
   const fetchAlbums = async () => {
       try {

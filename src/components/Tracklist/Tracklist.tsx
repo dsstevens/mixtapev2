@@ -9,7 +9,7 @@ const Tracklist = ({ playlist }: { playlist: TrackType[] }) => {
       <ul className='tracklist'>
         {playlist.map((track, index) => (
           <li key={index} className='track'>
-            {track.title} by {track.artist}
+            * {track.title} - {track.artist}
           </li>
         ))}
       </ul>
