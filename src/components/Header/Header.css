@@ -4,6 +4,7 @@ header {
   text-align: center;
   justify-content: space-around;
   background-color: #dbdc46;
+  margin-bottom: 0;
 }
 
 .page-title, .page-title-albums-page {

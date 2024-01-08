@@ -29,11 +29,29 @@ interface Release {
   basic_information: BasicInformation;
 }
 
+export interface TrackType {
+  position: string; // or number, if position is a number
+  title: string;
+  artist: string;
+}
+
 const App: React.FC<AppProps> = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-
+  const [playlist, setPlaylist] = useState<TrackType[]>([]);
   const [albums, setAlbums] = useState<BasicInformation[]>([]);
+
+  const addToPlaylist = (track: TrackType) => {
+    if (!playlist.some(t => t.position === track.position)) {
+      setPlaylist(prevPlaylist => {
+        const updatedPlaylist = [...prevPlaylist, track];
+        console.log("Updated Playlist:", updatedPlaylist);
+        return updatedPlaylist;
+      });
+    } else {
+      alert(`This track is already in your playlist.`);
+    }
+  };
 
   const fetchAlbums = async () => {
       try {
@@ -71,12 +89,9 @@ const App: React.FC<AppProps> = () => {
         {isHomePage ? null : <HomeButton />}
       </Header>
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home playlist={playlist} />} />
         <Route path="/:year" element={<AlbumsByYear allAlbums={albums} />} />
-        <Route
-          path="/:year/:album_id"
-          element={<AlbumDetail allAlbums={albums} />}
-        />
+        <Route path="/:year/:album_id" element={<AlbumDetail allAlbums={albums} playlist={playlist} addToPlaylist={addToPlaylist} />}/>
       </Routes>
     </main>
   );
