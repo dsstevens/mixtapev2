@@ -34,17 +34,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px 10px;
-  margin-bottom: 2px;
-  overflow: hidden;
+  margin: 2px 0;
 }
 
 .tracklist .track p {
-  max-width: 70%;
+  flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-right: 10px; 
 }
 
 .tracklist .track .add-button {
-  margin-left: auto;
+  white-space: nowrap;
 }
