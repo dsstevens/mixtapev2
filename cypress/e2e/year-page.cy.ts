@@ -15,7 +15,7 @@ describe('Albums By Year Page', () => {
 
   it('should display the page title and HOME button in the header', () => {
     cy.wait('@getReleases');
-    cy.get('h1').contains('MixTape');
+    cy.get('h1').contains('80\'s MixTape');
     cy.get('.home-button').contains('Home');
   });
 
