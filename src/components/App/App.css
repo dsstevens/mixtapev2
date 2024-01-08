@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-y: auto;
 }
 
 .main-page-font {
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Silkscreen', sans-serif;
 }
 
 .album-tracklist-font {

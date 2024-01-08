@@ -23,6 +23,10 @@ const Home = ({ playlist }: { playlist: TrackType[] }) => {
   }
 
   useEffect(() => {
+    console.log("Playlist in Home component:", playlist);
+  }, [playlist]);
+  
+  useEffect(() => {
     getCollection()
       .then(data => {
         // leaving this console.log in temporarily so we can see the data in the console that we have to work with while we set everything up
@@ -34,18 +38,17 @@ const Home = ({ playlist }: { playlist: TrackType[] }) => {
 
   return (
     <div className="Home">
-      <Tracklist playlist={playlist} /> {/* Keep this one */}
+      <Tracklist playlist={playlist} />
       <Dropdown
         open={open}
-        trigger={<button className='years-dropdown-button main-page-font' onClick={handleOpen}>Choose your favorite year from the 80's!</button>}
+        trigger={<button className='years-dropdown-button main-page-font' onClick={handleOpen}>
+        Choose your favorite year from the 80's!
+      </button>}
         menu={[1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989].map((year) => (
           <button key={year} onClick={() => handleYear(year)}>{year}</button>
         ))}
       />
 
-      <div className='tracklist-container'>
-        <p className='image-credits'>Image by janoon028 on Freepik</p>
-      </div>
     </div>
   );
 };

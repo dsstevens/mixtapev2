@@ -30,8 +30,9 @@ interface Release {
 }
 
 export interface TrackType {
+  position: string; // or number, if position is a number
   title: string;
-  
+  artist: string;
 }
 
 const App: React.FC<AppProps> = () => {
@@ -41,7 +42,15 @@ const App: React.FC<AppProps> = () => {
   const [albums, setAlbums] = useState<BasicInformation[]>([]);
 
   const addToPlaylist = (track: TrackType) => {
-    setPlaylist(prevPlaylist => [...prevPlaylist, track]);
+    if (!playlist.some(t => t.position === track.position)) {
+      setPlaylist(prevPlaylist => {
+        const updatedPlaylist = [...prevPlaylist, track];
+        console.log("Updated Playlist:", updatedPlaylist); // Log the updated playlist
+        return updatedPlaylist;
+      });
+    } else {
+      console.log(`This track is already in your playlist.`);
+    }
   };
 
   const fetchAlbums = async () => {
