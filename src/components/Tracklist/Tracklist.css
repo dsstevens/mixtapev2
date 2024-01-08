@@ -5,13 +5,14 @@
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  width: 80%;
+  width: 100%;
+  max-width: 100%;
   max-height: 55%;
-  max-width: 90%; /* Adjust this value to control the width */
-  margin-left: 25%;
-  margin-right: 15%;
+  margin-left: 10%;  /* Adjust or remove to increase available space */
+  margin-right: 0;
   margin-bottom: 10%;
   overflow: visible;
+  overflow-x: auto;
 }
 
 .tracklist-title {
@@ -38,9 +39,9 @@
 
 .tracklist .track p {
   flex-grow: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap; /* Ensure text doesn't wrap */
+  overflow: visible; /* Allow the text to be visible even if it overflows */
+  text-overflow: clip;
   margin-right: 10px; 
 }
 
