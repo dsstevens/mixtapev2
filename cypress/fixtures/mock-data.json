@@ -5,49 +5,280 @@
     "per_page": 50,
     "items": 222,
     "urls": {
-      "last": "https://api.discogs.com/users/mixtapestretch/collection/folders/0/releases?page=5&per_page=50",
-      "next": "https://api.discogs.com/users/mixtapestretch/collection/folders/0/releases?page=2&per_page=50"
+      "last": "https://api.discogs.com/users/mixtapestretch/collection/folders/0/releases?key=EfqdrylBHIKqDqyHFnDo&secret=TtLvAhhUXwTHVrROUcjSqRBGGIUqFFAc&page=5&per_page=50",
+      "next": "https://api.discogs.com/users/mixtapestretch/collection/folders/0/releases?key=EfqdrylBHIKqDqyHFnDo&secret=TtLvAhhUXwTHVrROUcjSqRBGGIUqFFAc&page=2&per_page=50"
     }
   },
   "releases": [
     {
-      "id": 123456,
-      "instance_id": 987654321,
+      "id": 379701,
+      "instance_id": 1539705736,
       "date_added": "2023-12-19T19:56:13-08:00",
-      "rating": 4,
+      "rating": 0,
       "basic_information": {
-        "id": 123456,
-        "master_id": 321654,
-        "master_url": "https://api.discogs.com/masters/321654",
-        "resource_url": "https://api.discogs.com/releases/123456",
-        "thumb": "https://example.com/image/thumb.jpg",
-        "cover_image": "https://example.com/image/cover.jpg",
-        "title": "Sample Album Title",
-        "year": 2023,
+        "id": 379701,
+        "master_id": 2439,
+        "master_url": "https://api.discogs.com/masters/2439",
+        "resource_url": "https://api.discogs.com/releases/379701",
+        "thumb": "https://i.discogs.com/ow-In_FH31bUi4eU9WqNbMmrijSkDsB5DQZrMtTkKkM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3OTcw/MS0xMzE0MDQyNTEw/LmpwZWc.jpeg",
+        "cover_image": "https://i.discogs.com/AP8lyu0PECn5CDa8H9JirXLPmQhk1gQ6IgF9XiZzXNk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3OTcw/MS0xMzE0MDQyNTEw/LmpwZWc.jpeg",
+        "title": "In The Flat Field",
+        "year": 1980,
         "formats": [
           {
             "name": "Vinyl",
             "qty": "1",
-            "descriptions": ["LP", "Album"]
+            "text": "Ʊtopia",
+            "descriptions": [
+              "LP",
+              "Album",
+              "Stereo"
+            ]
           }
         ],
         "artists": [
           {
-            "name": "Sample Artist",
-            "id": 654321,
-            "resource_url": "https://api.discogs.com/artists/654321"
+            "name": "Bauhaus",
+            "anv": "",
+            "join": "",
+            "role": "",
+            "tracks": "",
+            "id": 85897,
+            "resource_url": "https://api.discogs.com/artists/85897"
           }
         ],
         "labels": [
           {
-            "name": "Sample Label",
-            "catno": "SL1234",
-            "id": 432156,
-            "resource_url": "https://api.discogs.com/labels/432156"
+            "name": "4AD",
+            "catno": "CAD 13",
+            "entity_type": "1",
+            "entity_type_name": "Label",
+            "id": 634,
+            "resource_url": "https://api.discogs.com/labels/634"
           }
         ],
-        "genres": ["Rock"],
-        "styles": ["Alternative Rock"]
+        "genres": [
+          "Rock"
+        ],
+        "styles": [
+          "New Wave",
+          "Goth Rock",
+          "Post-Punk"
+        ]
+      }
+    },
+    {
+      "id": 63993,
+      "instance_id": 1539712942,
+      "date_added": "2023-12-19T20:18:16-08:00",
+      "rating": 0,
+      "basic_information": {
+        "id": 63993,
+        "master_id": 5232,
+        "master_url": "https://api.discogs.com/masters/5232",
+        "resource_url": "https://api.discogs.com/releases/63993",
+        "thumb": "https://i.discogs.com/FE73syao3sbTszjK_RSZJyMt7USJ2y67Vtf0-tLDUCI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYzOTkz/LTE0Mzg4ODExNDEt/OTYxNy5qcGVn.jpeg",
+        "cover_image": "https://i.discogs.com/0Y8pAVx9xitnO_0NHxj9sGWOYaSdi80fjIYNhJoI36E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYzOTkz/LTE0Mzg4ODExNDEt/OTYxNy5qcGVn.jpeg",
+        "title": "Treasure",
+        "year": 1984,
+        "formats": [
+          {
+            "name": "Vinyl",
+            "qty": "1",
+            "descriptions": [
+              "LP",
+              "Album"
+            ]
+          }
+        ],
+        "artists": [
+          {
+            "name": "Cocteau Twins",
+            "anv": "",
+            "join": "",
+            "role": "",
+            "tracks": "",
+            "id": 12373,
+            "resource_url": "https://api.discogs.com/artists/12373"
+          }
+        ],
+        "labels": [
+          {
+            "name": "4AD",
+            "catno": "CAD 412",
+            "entity_type": "1",
+            "entity_type_name": "Label",
+            "id": 634,
+            "resource_url": "https://api.discogs.com/labels/634"
+          }
+        ],
+        "genres": [
+          "Rock"
+        ],
+        "styles": [
+          "Ethereal",
+          "New Wave",
+          "Post-Punk"
+        ]
+      }
+    },
+    {
+      "id": 538036,
+      "instance_id": 1539713494,
+      "date_added": "2023-12-19T20:19:49-08:00",
+      "rating": 0,
+      "basic_information": {
+        "id": 538036,
+        "master_id": 91767,
+        "master_url": "https://api.discogs.com/masters/91767",
+        "resource_url": "https://api.discogs.com/releases/538036",
+        "thumb": "https://i.discogs.com/QrG45dS_ARvyIOg2nJlBQkdhLYotQlbcc1ORTZkbH8E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzODAz/Ni0xNDI5Mzg0MTMw/LTQ2ODQuanBlZw.jpeg",
+        "cover_image": "https://i.discogs.com/B8kmFAkoI_nF1QrnP5iKhxb6O92_kzAgft_eVSGeAiM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTUzODAz/Ni0xNDI5Mzg0MTMw/LTQ2ODQuanBlZw.jpeg",
+        "title": "Private Dancer",
+        "year": 1984,
+        "formats": [
+          {
+            "name": "Vinyl",
+            "qty": "1",
+            "descriptions": [
+              "LP",
+              "Album",
+              "Stereo"
+            ]
+          }
+        ],
+        "artists": [
+          {
+            "name": "Tina Turner",
+            "anv": "",
+            "join": "",
+            "role": "",
+            "tracks": "",
+            "id": 24221,
+            "resource_url": "https://api.discogs.com/artists/24221"
+          }
+        ],
+        "labels": [
+          {
+            "name": "Capitol Records",
+            "catno": "ST-12330",
+            "entity_type": "1",
+            "entity_type_name": "Label",
+            "id": 654,
+            "resource_url": "https://api.discogs.com/labels/654"
+          }
+        ],
+        "genres": [
+          "Rock"
+        ],
+        "styles": [
+          "Pop Rock"
+        ]
+      }
+    },
+    {
+      "id": 2227429,
+      "instance_id": 1539713845,
+      "date_added": "2023-12-19T20:20:53-08:00",
+      "rating": 0,
+      "basic_information": {
+        "id": 2227429,
+        "master_id": 4173,
+        "master_url": "https://api.discogs.com/masters/4173",
+        "resource_url": "https://api.discogs.com/releases/2227429",
+        "thumb": "https://i.discogs.com/oDnjpfz0Gou8COyieB_gZnSCEVxBUeIATEdH_JWsTX8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjc0/MjktMTQ1OTM0NTgx/MS0zNzkwLmpwZWc.jpeg",
+        "cover_image": "https://i.discogs.com/vb0_MtXD_2YqYqnUGOsX13PKRCshC5gkfdxoLhKxbU0/rs:fit/g:sm/q:90/h:500/w:509/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjc0/MjktMTQ1OTM0NTgx/MS0zNzkwLmpwZWc.jpeg",
+        "title": "Various Positions",
+        "year": 1984,
+        "formats": [
+          {
+            "name": "CD",
+            "qty": "1",
+            "descriptions": [
+              "Album"
+            ]
+          }
+        ],
+        "artists": [
+          {
+            "name": "Leonard Cohen",
+            "anv": "",
+            "join": "",
+            "role": "",
+            "tracks": "",
+            "id": 227848,
+            "resource_url": "https://api.discogs.com/artists/227848"
+          }
+        ],
+        "labels": [
+          {
+            "name": "CBS",
+            "catno": "CDCBS 26222",
+            "entity_type": "1",
+            "entity_type_name": "Label",
+            "id": 3072,
+            "resource_url": "https://api.discogs.com/labels/3072"
+          }
+        ],
+        "genres": [
+          "Rock"
+        ],
+        "styles": [
+          "Folk Rock"
+        ]
+      }
+    },
+    {
+      "id": 10164647,
+      "instance_id": 1537912219,
+      "date_added": "2023-12-17T13:41:10-08:00",
+      "rating": 0,
+      "basic_information": {
+        "id": 10164647,
+        "master_id": 26701,
+        "master_url": "https://api.discogs.com/masters/26701",
+        "resource_url": "https://api.discogs.com/releases/10164647",
+        "thumb": "https://i.discogs.com/cLDwZ04xTGbn73UKRks7LSinDV-P22lZT4uIfCIpql0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMTY0/NjQ3LTE0OTI3Mjk2/ODItMjI5MC5qcGVn.jpeg",
+        "cover_image": "https://i.discogs.com/8ahMvADzp6w_sUfIS6jAFpoKvVBI9r4hPkVWhHg-cVw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMTY0/NjQ3LTE0OTI3Mjk2/ODItMjI5MC5qcGVn.jpeg",
+        "title": "Born In The U.S.A.",
+        "year": 1984,
+        "formats": [
+          {
+            "name": "Vinyl",
+            "qty": "1",
+            "descriptions": [
+              "LP",
+              "Album"
+            ]
+          }
+        ],
+        "artists": [
+          {
+            "name": "Bruce Springsteen",
+            "anv": "",
+            "join": "",
+            "role": "",
+            "tracks": "",
+            "id": 219986,
+            "resource_url": "https://api.discogs.com/artists/219986"
+          }
+        ],
+        "labels": [
+          {
+            "name": "Columbia",
+            "catno": "QC 38653",
+            "entity_type": "1",
+            "entity_type_name": "Label",
+            "id": 1866,
+            "resource_url": "https://api.discogs.com/labels/1866"
+          }
+        ],
+        "genres": [
+          "Rock"
+        ],
+        "styles": [
+          "Pop Rock"
+        ]
       }
     }
   ]
