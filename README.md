@@ -1,6 +1,5 @@
 # MixTape v2
-
-<!-- ![Deployed Site]() -->
+[Deployed Site](https://mixtapev2-ten.vercel.app/)
 
 # 💻 Tech Stack
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -23,12 +22,11 @@
 # 💭 Abstract
 Mixtape is a project that uses a collection of albums from the 80s to create a nostalgic "mixtape" of your favorite songs from the decade. A user can choose the year to see specifically the curation of best albums from that time period and see a refined selection. From there, the user can choose a specific album to see its track list and select a song to add to the playlist on the main page. We focused our efforts on creating an easy-to-use and accessible web app for the user while integrating newly self-taught TypeScript. Responsive design, Cypress testing, React Router and the Discogs API with an OAuth were utilized in the creation of this application. We collaboratively designed the final concept, the user stories of UI/UX, the wireframe for the structure of the React app and aesthetic design choices. Sharing resources for self-teaching on TypeScript was vital to our progress with this application and we benefited from tutorials, youtube videos, github TypeScript resources 
 
-
 # 📝 Context
 1 week sprint, 4 collaborators, using the [Discogs API](https://www.discogs.com/developers)
 
 # 🖼️ Preview
-<!--  ![MixTape](https://github.com/) -->
+https://github.com/dsstevens/mixtapev2/assets/133910120/a25469cb-69cc-4992-807f-f1da7abb64cb
 
 # 🔧 Installation Instructions
 1. Click the green code button.
@@ -51,7 +49,6 @@ Mixtape is a project that uses a collection of albums from the 80s to create a n
 - Ditch using PropTypes for Typescript (yay!)
 - Understand the fundamentals of TypeScript within a React app to type check for props and allow for types, aliases and interfaces to be used across the whole application
 
-
 # 🚧 Challenges 
 - Working with Typescript for the first time on a collaborative project.
 - Choosing a music API was more difficult than we imagined and we landed on one with an OAuth for its network requests which had a learning curve especially to integrate within the IDE.
@@ -59,7 +56,6 @@ Mixtape is a project that uses a collection of albums from the 80s to create a n
 - Utilizing .env variables to obfuscate the key and signature and adding the dotenv dependency created issues with TypeScript.
 - Initally 'cold-rolling' the app led to inconsistencies with dependency versions across mutliple environments so we last minute created v2 with the TS template.
 - Pagination of multiple pages of API calls led to difficulties with Cypress stubbing in the testing process.
-- 
 
 # 🌟 Wins
 - Practicing group standups everyday that we met with detailed notes.
@@ -67,5 +63,6 @@ Mixtape is a project that uses a collection of albums from the 80s to create a n
 - Utilizing the API in our app to fetch albums in our Discogs collection and having the track names render on an individual album view.
 - Functionality to add a track name to the final playlist on the home page.
 - Lots of troubleshooting solidified workflow knowledge.
+- Figuring out alternative ways to get past issues, such as starting up a new repo so we'd stop having so many dependency issues.
 - Had fun planning and getting more experience with Figma.
 - Understanding the importance of maintaining the state of the application in the parent component.
