@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getSingleAlbum } from "../../apiCalls";
 import "./AlbumDetail.css";
 
@@ -16,79 +16,18 @@ interface OneAlbum {
   }[];
 }
 
-interface Artist {
-  name: string;
-}
-
-interface BasicInformation {
-  title: string;
-  year: number;
-  cover_image: string;
-  id: string;
-  master_id: string;
-  artists: Artist[];
-}
-
-interface Track {
-  duration: string;
-  position: string;
-  title: string;
-  type_: string;
-}
-
 interface AlbumDetailPageProps {
-  allAlbums: BasicInformation[];
-}
-
-interface ClickedTracks {
-  [key: string]: boolean; 
+  clickedTracks: Record<number, boolean>;
+  singleAlbum: OneAlbum | {};
+  setSingleAlbum: (data: any) => void;
+  handleClick: (trackIndex: number, trackName: string) => void;
 }
 
 const AlbumDetailPage = (props: AlbumDetailPageProps) => {
-  const { allAlbums } = props;
-  const [singleAlbum, setSingleAlbum] = useState<OneAlbum | {}>({});
-  const [clickedTracks, setClickedTracks] = useState<Record<number, boolean>>(
-    {}
-  );
-  const [savedTracks, setSavedTracks] = useState<Track[]>([]);
+  const { clickedTracks, singleAlbum, setSingleAlbum, handleClick } = props;
   const [error, setError] = useState<string>("");
-  const navigate = useNavigate();
   const params = useParams();
   const id = parseInt(params.album_id as string);
-
-  const handleClick = (trackIndex: number, trackName: string) => {
-    setClickedTracks((prevState) => ({
-      ...prevState,
-      [trackIndex]: true,
-    }));
-    addSong(trackName)
-    console.log("SAVED TRACKS", savedTracks)
-  };
-
-  // const getTracks = () => {
-  //   let arr: Track[] = [];
-  //   let keys = Object.keys(clickedTracks);
-
-  //   (singleAlbum as OneAlbum).tracklist.forEach((single, index) => {
-  //     if (keys.includes(index.toString())) {
-  //       arr.push(single);
-  //     }
-  //   });
-  //   setSavedTracks(arr);
-  // };
-
-  const addSong = (title: string) => {
-    let foundTrack = (singleAlbum as OneAlbum).tracklist.find(
-      (single) => single.title === title
-    );
-    if (foundTrack) {
-      setSavedTracks([...savedTracks, foundTrack]);
-    }
-  };
-
-  const handleHomeClick = () => {
-    navigate("/");
-  };
 
   useEffect(() => {
     const fetchSingleAlbum = async () => {
@@ -111,7 +50,10 @@ const AlbumDetailPage = (props: AlbumDetailPageProps) => {
       <p>Duration: {track.duration}</p>
       {clickedTracks[index] && <span className="add-button"> Added ✅</span>}
       {!clickedTracks[index] && (
-        <button onClick={() => handleClick(index, track.title)} className="add-button">
+        <button
+          onClick={() => handleClick(index, track.title)}
+          className="add-button"
+        >
           Add
         </button>
       )}

@@ -25,28 +25,58 @@ interface BasicInformation {
   artists: Artist[];
 }
 
+interface OneAlbum {
+  tracklist: {
+    position: string;
+    type_: string;
+    title: string;
+    duration: string;
+  }[];
+  title: string;
+  artists: {
+    name: string;
+  }[];
+}
+
 interface Release {
   basic_information: BasicInformation;
 }
 
-// interface Track {
-// duration: string;
-// position: string;
-// title: string;
-// type_: string;
-// }
+interface Track {
+  duration: string;
+  position: string;
+  title: string;
+  type_: string;
+}
 
 const App: React.FC<AppProps> = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
   const [albums, setAlbums] = useState<BasicInformation[]>([]);
-  // const [tracklist, setTracklist] = useState<Track[]>([])
+  const [singleAlbum, setSingleAlbum] = useState<OneAlbum | {}>({});
+  const [savedTracks, setSavedTracks] = useState<Track[]>([]);
+  const [clickedTracks, setClickedTracks] = useState<Record<number, boolean>>(
+    {}
+  );
 
-  // const addSong = (track: Track) => {
-  //   const song = singleAlbum
-  //   setTracklist([...tracklist, track])
-  // }
+  const addSong = (title: string) => {
+    let foundTrack = (singleAlbum as OneAlbum).tracklist.find(
+      (single) => single.title === title
+    );
+
+    if (foundTrack) {
+      setSavedTracks([...savedTracks, foundTrack]);
+    }
+  };
+
+  const handleClick = (trackIndex: number, trackName: string) => {
+    setClickedTracks((prevState) => ({
+      ...prevState,
+      [trackIndex]: true,
+    }));
+    addSong(trackName);
+  };
 
   const fetchAlbums = async () => {
     try {
@@ -88,7 +118,14 @@ const App: React.FC<AppProps> = () => {
         <Route path="/:year" element={<AlbumsByYear allAlbums={albums} />} />
         <Route
           path="/:year/:album_id"
-          element={<AlbumDetail allAlbums={albums} />}
+          element={
+            <AlbumDetail
+              clickedTracks={clickedTracks}
+              singleAlbum={singleAlbum}
+              setSingleAlbum={setSingleAlbum}
+              handleClick={handleClick}
+            />
+          }
         />
       </Routes>
     </main>
