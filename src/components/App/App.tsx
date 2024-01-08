@@ -29,11 +29,19 @@ interface Release {
   basic_information: BasicInformation;
 }
 
+interface TrackType {
+  title: string;
+}
+
 const App: React.FC<AppProps> = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-
+  const [playlist, setPlaylist] = useState<TrackType[]>([]);
   const [albums, setAlbums] = useState<BasicInformation[]>([]);
+
+  const addToPlaylist = (track: TrackType) => {
+    setPlaylist(prevPlaylist => [...prevPlaylist, track]);
+  };
 
   const fetchAlbums = async () => {
       try {
@@ -71,12 +79,9 @@ const App: React.FC<AppProps> = () => {
         {isHomePage ? null : <HomeButton />}
       </Header>
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home playlist={playlist} />} />
         <Route path="/:year" element={<AlbumsByYear allAlbums={albums} />} />
-        <Route
-          path="/:year/:album_id"
-          element={<AlbumDetail allAlbums={albums} />}
-        />
+        <Route path="/:year/:album_id" element={<AlbumDetail allAlbums={albums} playlist={playlist} addToPlaylist={addToPlaylist} />}/>
       </Routes>
     </main>
   );

@@ -31,10 +31,15 @@ interface BasicInformation {
 
 interface AlbumDetailPageProps {
   allAlbums: BasicInformation[];
+  playlist: TrackType[];
+  addToPlaylist: (track: TrackType) => void;
 }
 
-const AlbumDetailPage = (props: AlbumDetailPageProps) => {
-  const { allAlbums } = props;
+interface TrackType {
+  title: string;
+}
+
+const AlbumDetailPage = ({ allAlbums, playlist, addToPlaylist }: AlbumDetailPageProps) => {
   const [singleAlbum, setSingleAlbum] = useState<OneAlbum | {}>({});
   const [error, setError] = useState<string>("");
   const navigate = useNavigate();
@@ -66,9 +71,9 @@ console.log("SINGLE ALBUM", singleAlbum)
 
 const tracks = (singleAlbum as OneAlbum).tracklist?.map((album, index) => (
   <div key={index} className='track'>
-    <div className="track-info album-tracklist-font"> {/* Apply the class here */}
+    <div className="track-info album-tracklist-font">
       <p>{index + 1}. {album.title}</p>
-      <button className='add-button'>Add</button>
+      <button className='add-button' onClick={() => addToPlaylist(album)}>Add</button>
     </div>
   </div>
 ));

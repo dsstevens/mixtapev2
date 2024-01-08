@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import Tracklist from '../Tracklist/Tracklist';
 import Dropdown from '../Dropdown/Dropdown';
 import { getCollection } from '../../apiCalls';
+import { TrackType } from '../App/App';
 
-const Home = () => {
+
+const Home = ({ playlist }: { playlist: TrackType[] }) => {
   const [open, setOpen] = useState(false);
   const [collection, setCollection] = useState<{}[]>([]);
   const [error, setError] = useState('');
@@ -32,6 +34,7 @@ const Home = () => {
 
   return (
     <div className="Home">
+      <Tracklist playlist={playlist} /> {/* Keep this one */}
       <Dropdown
         open={open}
         trigger={<button className='years-dropdown-button main-page-font' onClick={handleOpen}>Choose your favorite year from the 80's!</button>}
@@ -41,7 +44,6 @@ const Home = () => {
       />
 
       <div className='tracklist-container'>
-        <Tracklist />
         <p className='image-credits'>Image by janoon028 on Freepik</p>
       </div>
     </div>
