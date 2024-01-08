@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: left;
   align-items: left;
-  width: 100%;
+  width: 80%; 
   max-height: 55%;
   max-width: 50%;
   margin-left: 25%;
@@ -26,5 +26,25 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: visible;
+}
+
+.tracklist .track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  margin-bottom: 2px;
   overflow: hidden;
+}
+
+.tracklist .track p {
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tracklist .track .add-button {
+  margin-left: auto;
 }
